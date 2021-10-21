@@ -1,0 +1,364 @@
+@keyframes slide-down {
+  0% {
+    opacity: 0.5;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1593270573246-2dca2f2c1c43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 90em;
+}
+
+.banner-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.banner-description {
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+  font-size: 48px;
+  color: white;
+  width: 600px;
+  border-top: 1px solid white;
+  padding-top: 35px;
+  text-align: center;
+  animation: 1s ease-out 0s 1 slide-down;
+}
+
+.banner-subhead {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  width: 600px;
+  border-bottom: 1px solid white;
+  padding-bottom: 35px;
+  margin-bottom: 0;
+  animation: 1s ease-out 0s 1 slide-up;
+}
+
+.divider {
+  border: 1px solid white;
+  width: 0px;
+  height: 50px;
+}
+
+.info-header {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 32px;
+}
+
+.info-text {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  text-align: left;
+  font-size: 24px;
+}
+
+.info-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3%;
+  margin: 3% 3% 0% 3%;
+  line-height: 44px;
+  height: 50em;
+  color: black;
+  border-bottom: 1px solid #feb24c;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  margin: 10px;
+}
+
+.info-image {
+  height: 80%;
+  width: 40%;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.mock-icon {
+  font-size: 32px;
+  font-weight: 700;
+  margin-right: 10 px;
+}
+
+.gallery-flex {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 1%;
+  margin: 5% 10%;
+  width: 80%;
+  background-color: white;
+  animation: 1s ease-out 0s 1 appear;
+  box-shadow: 2px 2px black;
+}
+
+.gallery-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 32px;
+  margin: 5% 15% 0% 15%;
+  line-height: 2em;
+}
+
+.item-container {
+  width: 10em;
+  height: 10em;
+}
+
+.imgs {
+  width: 90%;
+  padding: 5%;
+  height: 20em;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transform: rotateY(0deg);
+}
+
+.img-description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-top: 25%;
+  padding-left: 10%;
+  padding-right: 10%;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  font-family: "Quicksand", sans-serif;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transform: rotateY(-180deg);
+}
+
+.img-wrap:hover .img-description {
+  text-shadow: 2px 2px black;
+  visibility: visible;
+  opacity: 1;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  box-shadow: 2px 2px black;
+  transform: rotateY(0deg);
+}
+
+.img-wrap:hover .imgs {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+.img-wrap:hover .codePen {
+  opacity: 0;
+}
+
+.codePen {
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.image-desc-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 5% 20% 0% 20%;
+  background-color: white;
+  padding: 1%;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  width: 60%;
+  margin: 1% 0% 0% 20%;
+  padding: 5%;
+  animation: 1s ease-out 0s 1 appear;
+  box-shadow: 2px 2px black;
+}
+
+.article-link {
+  font-size: 28px;
+  margin: 1%;
+  font-family: "Open Sans", sans-serif;
+  color: #3182bd;
+  margin: 2%;
+}
+
+.article-paragraph {
+  font-size: 24px;
+  margin: 3% 15%;
+  font-weight: 300;
+  line-height: 45px;
+  text-indent: 75px;
+}
+
+.article-image {
+  margin: 3% 35%;
+}
+
+.article-note {
+  font-size: 22px;
+  margin: 3% 15%;
+  font-weight: 300;
+  line-height: 45px;
+  text-align: center;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .banner-description-container {
+    padding: 5% 0% 0% 5%;
+  }
+
+  .banner-description {
+    font-size: 28px;
+  }
+
+  .banner-subhead {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .info-text {
+    font-size: 22px;
+  }
+
+  .info-flex {
+    flex-direction: column;
+    height: 70em;
+    margin: 0%;
+    padding: 5%;
+  }
+
+  .extended-flex {
+    flex-direction: column;
+    height: 110em;
+    margin: 0%;
+    padding: 5%;
+  }
+
+  .info-image {
+    width: 90%;
+    height: 30%;
+  }
+
+  .extended-image {
+    width: 90%;
+    height: 20%;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
+  .gallery-flex {
+    margin: 5%;
+    padding: 5%;
+    width: 90%;
+  }
+
+  .gallery-image {
+    width: 25em;
+    height: 17.5em;
+  }
+
+  .gallery-title {
+    font-size: 24px;
+  }
+
+  .imgs {
+    height: 15em;
+  }
+
+  .article-container {
+    width: 80%;
+    margin: 0% 10%;
+  }
+}
+
+.image-desc-container {
+  width: 80%;
+  margin: 3% 10% 0% 10%;
+  padding: 3% 10%;
+  animation: 1s ease-out 0s 1 appear;
+  box-shadow: 2px 2px black;
+}
+
+@media (max-width: 480px) {
+  .banner-description {
+    text-align: center;
+  }
+
+  .imgs {
+    height: 8em;
+  }
+
+  .article-link {
+    font-size: 24px;
+    margin: 5%;
+  }
+}
